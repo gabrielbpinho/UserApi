@@ -5,6 +5,9 @@ namespace UserApi.Data.DTO.Usuario
 {
     public class LeituraUsuarioDTO
     {
+        [Required]
+        public int Id { get; set; }
+
         [Required(ErrorMessage = "O campo nome é obrigatório")]
         [StringLength(50)]
         [Display(Name = "Nome")]
@@ -37,7 +40,11 @@ namespace UserApi.Data.DTO.Usuario
         [Display(Name = "Complemento")]
         public string Endereco2 { get; set; }
 
-        [StringLength(10)]
+        [StringLength(100)]
+        [Display(Name = "Bairro")]
+        public string Bairro { get; set; }
+
+        [StringLength(50)]
         [Display(Name = "Estado")]
         public string Estado { get; set; }
 

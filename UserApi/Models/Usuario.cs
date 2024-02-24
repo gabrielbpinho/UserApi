@@ -40,7 +40,11 @@ namespace UserApi.Models
         [Display(Name = "Complemento")]
         public string Endereco2 { get; set; }
 
-        [StringLength(10)]
+        [StringLength(100)]
+        [Display(Name = "Bairro")]
+        public string Bairro { get; set; }
+
+        [StringLength(50)]
         [Display(Name = "Estado")]
         public string Estado { get; set; }
 
